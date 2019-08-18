@@ -108,7 +108,7 @@ edged = cv2.Canny(blurred, 10, 250)
 cv2.imshow("Edged",edged)
 cv2.waitKey(0)
 
-_, contours, _ = cv2.findContours(edged.copy(),cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+contours, _ = cv2.findContours(edged.copy(),cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 contours = sorted(contours, key = x_cord_contour, reverse = False)
 
 
